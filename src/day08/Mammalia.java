@@ -10,7 +10,7 @@ package day08;
 
 
 //추상클래스는 추상메서드를 가질 수도 있고 구현메서드로만 구성될 수 있다.
-//추상메서드를 하나라도 가지고 있는 클래스(Mammalia)는 반드시 추상클래스여야한다.
+//추상메서드를 하나라도 가지고 있는 클래스(여기서 Mammalia)는 반드시 추상클래스여야한다.
 public abstract class Mammalia { 
 	int eye, nose, ear;
 	String name;

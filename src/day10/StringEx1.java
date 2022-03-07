@@ -14,7 +14,7 @@ public class StringEx1 {
 		}
 		
 		if(str1.equals(str2)) {
-			System.out.println("동일하 문자열");  //O출력(문자열 자체를 비교하는것이기 때문에)
+			System.out.println("동일한 문자열");  //O출력(문자열 자체를 비교하는것이기 때문에)
 		}else {
 			System.out.println("다른 문자열");
 		}
@@ -27,7 +27,7 @@ public class StringEx1 {
 		System.out.println(str1);
 		System.out.println(str1.toString()); 
 		// Overriding mothod라서 문자열자체가 출력
-	
+ 	
 		
 		//참조값
 		System.out.println(str1.getClass().getName()+ '@' + Integer.toHexString(str1.hashCode()));
@@ -42,7 +42,7 @@ public class StringEx1 {
 			System.out.println("동일 객체"); 
 		}else {
 			System.out.println("다른객체"); 
-		}//동일 객체 출력 =>String은 같은문자열 갖으면 같은 참조값사용
+		}//동일 객체 출력 =>String은 같은문자열 갖으면 같은 참조값사용 // 위에는?=>아예 다른 객체 생성했잖아
 		
 		
 		//deprecated : 더 이상 안씀

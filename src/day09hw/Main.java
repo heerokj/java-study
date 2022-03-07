@@ -7,6 +7,8 @@ public class Main {
 		
 		Dog d = new Dog();
 		d.barkSound();
+		d.eating("°¨ÀÚ");
+		
 
 	}
 }
