@@ -1,4 +1,4 @@
-package day11hw;
+package day11hw; //버튼생성하기
 
 import java.awt.Button;
 import java.awt.Frame;

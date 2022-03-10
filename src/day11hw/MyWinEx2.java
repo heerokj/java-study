@@ -1,4 +1,4 @@
-package day11hw;
+package day11hw; // 특정종료버튼 클릭시 String출력후 종료
 
 import java.awt.Button;
 import java.awt.Frame;

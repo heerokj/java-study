@@ -1,4 +1,4 @@
-package day11hw;
+package day11hw;// X버튼 클릭시 종료 / 특정버튼 클릭시 이벤트실행
 
 import java.awt.Button;
 import java.awt.Frame;
@@ -54,7 +54,7 @@ public class MyWinEx3 extends Frame implements WindowListener,ActionListener {
 	public void windowDeactivated(WindowEvent e) {}
 
 	@Override
-	public void actionPerformed(ActionEvent e) { //클릭하면 콘솔에 랜덤하게 구구단중 1개의단 출력
+	public void actionPerformed(ActionEvent e) { //클릭하면 콘솔에 랜덤하게 구구단중 1개의단 출력..
 		
 		
 	}	
