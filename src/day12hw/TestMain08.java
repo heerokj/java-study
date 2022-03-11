@@ -54,12 +54,11 @@ public class TestMain08 extends Frame implements KeyListener{
 	}
 	@Override
 	public void keyTyped(KeyEvent e) { }
+	//캐릭터 움직임은 각 버튼에대해 for문을 통해서 구현
 	@Override
 	public void keyPressed(KeyEvent e) {		
-//		int code = e.getKeyCode();
-//		System.out.println(code);
+
 		
-		//버튼1의x값을 불러오는데 변수x1에대입 (6개의 버튼 다하기)
 		int x = btn.getX();
 		for(int i =0; i<btn.length; i++) {
 			int x =btn[i].getX();
