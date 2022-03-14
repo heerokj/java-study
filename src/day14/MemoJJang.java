@@ -47,7 +47,7 @@ public class MemoJJang extends JFrame implements ActionListener{
 		jmHelp.add(jmiHelp);
 		
 		//메뉴바에 메뉴를 부착
-		jmb.add(jmFile);
+		jmb.add(jmFile); 
 		jmb.add(jmHelp);
 		
 		//프레임에 메뉴바를 부착
@@ -62,19 +62,21 @@ public class MemoJJang extends JFrame implements ActionListener{
 		
 		
 		
-		
-		//컴포넌트 초기화
+		//<JTextArea>
+		//컴포넌트 초기화 & 
 		jta = new JTextArea(); 
 		Font f = new Font("굴림체",Font.PLAIN,30);
 		jta.setFont(f);
 
-		//컴포넌트 부착
+		
+		//<JScrollPane>
+		//컴포넘트 초기화 & 컴포넌트 부착
 		//jsp = new JScrollPane(정중앙에부착할컴포넌트, 수직스크롤바정책, 수평스크롤바정책);
 		jsp = new JScrollPane(jta,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
 				JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED );
 		//add(jta); 이거 하면 안됨
 		add(jsp);
-		
+		 
 		
 		
 		setTitle("제목없음 - Windows  메모장");
@@ -92,11 +94,12 @@ public class MemoJJang extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 //		String cmd = e.getActionCommand();  //그리좋은방법은아냐
-//		System.out.println(cmd);
+//		System.out.println(cmd); 		
 		Object obj = e.getSource(); // 오브젝트가 넘어옴
-		if(obj == jmiExit) {
+		if(obj == jmiExit) { 
 			System.out.println("종료합니다.");
-			System.exit(0);
+			System.exit(0);		
+			
 		}else if(obj == jmiNew) {
 			//jta에 글자가 있다면 가져오기
 			String txt = jta.getText();
@@ -109,27 +112,28 @@ public class MemoJJang extends JFrame implements ActionListener{
 				System.out.println(result);	
 				if( result == JOptionPane.YES_NO_OPTION) {
 					//저장하자..
-					System.out.println("저장하자");
+					System.out.println("저장하자"); 
 				}
-			}
-									
+			}							
+			jta.setText(""); // New눌렀을때 나타나는 옵션창의 YES또는NO또는CANCEL눌렀을때 TexArea에 내용없어짐
 			
-			jta.setText("");
 		}else if(obj ==jmiOpen) {
 			JFileChooser jfc = new JFileChooser("c:\\"); //특정 디렉토리로 띄우게 됨
-			int result = jfc.showOpenDialog(this); //c드라이브에 있는 헬로우.자바
+			int result = jfc.showOpenDialog(this); //'열기'창 뜸(찾는위치 c드라이브로 되어있음) /정수타입으로 리턴(확인:0/취소:1)
 			System.out.println(result);//open c드라이브 hello.java클릭 후 확인:0출력 /취소:1출력
-		  if(result == JFileChooser.APPROVE_OPTION) {  //result == 0           
+			if(result == JFileChooser.APPROVE_OPTION) {  //result == 0           
 		   File f = jfc.getSelectedFile();
 		   System.out.println("파일의 절대경로 : "+f.getAbsolutePath());		
-		  } 		  
+		  } 		
+		  
 	  }else if(obj == jmiSave) {
 		  JFileChooser fjc = new JFileChooser("c:\\");
 		  int result = fjc.showSaveDialog(this); //저장다이아로그를 보여줘 //정수타입으로 리턴(확인:0/취소:1)
-		  System.out.println(result);
+		  System.out.println(result); //출력
 		  if(result == JFileChooser.APPROVE_OPTION) { // result가 0이라면 즉, 승인옵션이라면
 			  System.out.println("파일저장..");
 		  }
+		  
 	  }else if(obj == jmiHelp) {
 		  for(int i =0; i<10;i++) {
 			  new SwingEx1(); //창 10개 뜸
