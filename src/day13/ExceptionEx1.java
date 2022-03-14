@@ -21,7 +21,7 @@ public class ExceptionEx1 {
 			System.out.println("ArithmeticExcepton 발생하면 " 
 		                + "이부분의 코드가 샐행됨");		
 		}catch(NullPointerException ne) {
-			System.out.println("널 포이터 예외 발생시 이 코드실행");
+			System.out.println("널 포이터 예외 발생시 이 코드실행"); 
 		}catch(Exception e) {
 			//모든 Exception의 조상 / 마지막에 써주기 / 위에서 안걸리는거 써주기
 			System.out.println("모든 예외는 여기서 다 걸림");

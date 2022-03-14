@@ -12,19 +12,20 @@ public class c_Producter extends Thread{
 	@Override
 	public void run() {
 		for(int i=0; i<20; i++) {
-		try {
-			//2초간 대기
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// 2초마다 차를 1대씩 생산
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			//차량 이름을 얻어오기
+			String name = car.getCarName();
+			
+			//차고에 넣기
+			car.push(name);
 		}
-		//차량 이름을 얻어오기
-		String name = car.getCarName();
-		
-		//차고에 넣기
-		car.push(name);
-	}
 	
 	}
 	

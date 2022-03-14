@@ -1,4 +1,4 @@
-package day15; //다른사람꺼 주석 보기
+package day15; 
 
 import java.util.Random;
 
@@ -7,30 +7,34 @@ import javax.swing.JButton;
 
 //멀티스레드 처리
 //상속 : A is a B
-//     말 has a 버튼
+//     말 has a 버튼 
 
 public class Horse extends Thread {
 
 	JButton jbtn; //지역변수가 멤버면수로 써야하니깐 아래에 this써주기
 	ImageIcon img1,img2;
 	
-	Horse(JButton jbtn,ImageIcon img1,ImageIcon img2) { 
+	Horse(JButton jbtn,ImageIcon img1,ImageIcon img2) { 		
 		this.jbtn = jbtn;
 		this.img1 = img1;
 		this.img2 = img2;
-		System.out.println(this.jbtn);
+		System.out.println(this.jbtn); //??%%%%%
 	}
 
 	@Override
 	public void run() {
 		// 동시에 처리할 코드..
 		jbtn.setIcon(img1);//달리는 이미지로 교체
+		
 		Random rnd = new Random();
+		
+		// 100번동안 x값 랜덤으로 +됨,
+		//for문 한번 돌고 0.08초 멈췄다 다시 실행
 		for (int i = 0; i <= 100; i++) {
 			jbtn.setLocation(jbtn.getX() + rnd.nextInt(20), 
 					jbtn.getY());
 			try {
-				Thread.sleep(50);
+				Thread.sleep(80); 
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
