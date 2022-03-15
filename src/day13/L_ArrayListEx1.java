@@ -2,7 +2,7 @@ package day13;
 
 import java.util.ArrayList;
 
-public class L_ArratListEx1 {
+public class L_ArrayListEx1 {
 	public static void main(String[] args) {
 		
 		ArrayList v = new ArrayList();

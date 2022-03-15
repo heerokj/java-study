@@ -1,4 +1,4 @@
-package aaa;
+package aTest;
 
 public class list {
 	
