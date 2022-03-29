@@ -18,7 +18,7 @@ public class StatementTest02 {
 			}
 			System.out.println("누적합 : " + sum); //디버깅해서 아래랑 결과 값 차이 이해하기 => ok
 		}
-		System.out.println("누적합 : " + sum);
+		System.out.println("최종누적합 : " + sum);
 	}
 
 }

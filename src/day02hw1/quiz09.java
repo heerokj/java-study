@@ -1,4 +1,4 @@
-package day02hw1; //고�?? 찾아봄✔
+package day02hw1; //찾아봄
 
 public class quiz09 {
 

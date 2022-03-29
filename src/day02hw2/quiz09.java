@@ -1,27 +1,27 @@
-package day02hw2; //ê³ ë?? ok       // ??ë¬¸ì A : 65 ~ Z :90?œ”?œ” //?†Œë¬¸ì a : 97 ~ z :122?œ”?œ”
+package day02hw2; //ê³ ï¿½?? ok       // ??ë¬¸ì A : 65 ~ Z :90?ï¿½ï¿½?ï¿½ï¿½ //?ï¿½ï¿½ë¬¸ì a : 97 ~ z :122?ï¿½ï¿½?ï¿½ï¿½
 import java.io.IOException;
 
 public class quiz09 {
 	public static void main(String[] args) throws IOException {
 
-		System.out.println("?…? ¥:");
+		System.out.println("ì…ë ¥:");
 
-		int value = System.in.read(); // ?‚¬?š©?ë¡œë??„° ê°’ì„ ?…? ¥ë°›ìŒ
+		int value = System.in.read(); // ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ë¡œï¿½??ï¿½ï¿½ ê°’ì„ ?ï¿½ï¿½?ï¿½ï¿½ë°›ìŒ
 
 		if (65 <= value && value <= 90) {
-			System.out.println((char) value + " ?Š” ??ë¬¸ì?…?‹ˆ?‹¤."); // ?•„?Š¤?‚¤ì½”ë“œë¡? ì¶œë ¥?˜?Š”?°
-		} else if (97 <= value && value <= 122) { // (char)ë¶™ì—¬ì£¼ë©´ ?•´?‹¹ ë¬¸ìë¡? ì¶œë ¥?¨?œ”
-			System.out.println((char) value + " ?Š” ?†Œë¬¸ì?…?‹ˆ?‹¤.");
+			System.out.println((char) value + " ëŠ” ëŒ€ë¬¸ìì…ë‹ˆë‹¤."); // ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ì½”ë“œï¿½? ì¶œë ¥?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½
+		} else if (97 <= value && value <= 122) { // (char)ë¶™ì—¬ì£¼ë©´ ?ï¿½ï¿½?ï¿½ï¿½ ë¬¸ìï¿½? ì¶œë ¥?ï¿½ï¿½?ï¿½ï¿½
+			System.out.println((char) value + " ëŠ” ì†Œë¬¸ìì…ë‹ˆë‹¤.");
 		}
 
-		//ê°„ë‹¨?ˆ?
+		//ê°„ë‹¨?ï¿½ï¿½?
 //		int i = System.in.read();
 //		char c = (char) i;
 //		if (i >= 65) {
 //			if (i <= 90) {
-//				System.out.println(c + "??(?Š”) ??ë¬¸ì?…?‹ˆ?‹¤.");
+//				System.out.println(c + "??(?ï¿½ï¿½) ??ë¬¸ì?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½.");
 //			} else if (i <= 122) {
-//				System.out.println(c + "??(?Š”) ?†Œë¬¸ì?…?‹ˆ?‹¤.");
+//				System.out.println(c + "??(?ï¿½ï¿½) ?ï¿½ï¿½ë¬¸ì?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½.");
 //			}
 //		}
 	}

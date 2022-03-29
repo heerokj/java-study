@@ -10,7 +10,20 @@ public class quiz13 {
 			System.out.println();
 		}
 		String str = "*";
-
+		
+		
+		System.out.println("------");
+		//두번째 풀때
+		for (int j = 1; j <= 5; j++) {
+			for (int i = 5; i >= j; i--) {
+				String sum = "";
+				sum += "*";
+				System.out.print(sum);
+			}
+			System.out.println();
+		}
+		
+		
 	}
 
 }

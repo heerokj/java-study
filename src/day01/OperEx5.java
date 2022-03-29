@@ -1,18 +1,19 @@
 package day01;
-// 5. ë¹„íŠ¸?—°?‚°? : ë¹„íŠ¸ ?‹¨?œ„ë¡? ?—°?‚°
-// and : & , or: |
 
+//5. ë¹„íŠ¸ ì—°ì‚°ì : ë¹„íŠ¸ ë‹¨ìœ„ë¡œ ì—°ì‚°
+
+// and : & , or: |
 // boolean : true :1 , false :0
 
-// ?¤ alt + ë°©í–¥?‚¤
 public class OperEx5 {
 
 	public static void main(String[] args) {
-	    byte a =10;  
+	   
+		byte a =10;  
 		byte b =20; 
 		System.out.println("------------------");
 
-		System.out.println("a&b : " + (a&b)); 
+		System.out.println("a&b : " + (a&b));  
 		// 10 2ì§„ìˆ˜ : 0000 1010
 		//           and
 		// 20 2ì§„ìˆ˜ : 0001 0110
@@ -20,7 +21,7 @@ public class OperEx5 {
 		System.out.println("a|b : " + (a|b));
 		
 		byte k1 = 13; //13 2ì§„ìˆ˜ 0000 1101
-		byte k2 = 17; //17 2ì§„ìˆ˜ 0001 0001         //0000 1101 ê³? 0001 0001ë¥? ?ë¦¬ë§ì¶°ì„œ ê³„ì‚°  
+		byte k2 = 17; //17 2ì§„ìˆ˜ 0001 0001         //0000 1101 ï¿½? 0001 0001ï¿½? ?ï¿½ï¿½ë¦¬ë§ì¶°ì„œ ê³„ì‚°  
 		System.out.println("k1&k2 : " + (k1&k2)); //0000 1101 
 		                                          // and
 		                                          //0001 0001    

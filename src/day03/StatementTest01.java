@@ -6,13 +6,13 @@ public class StatementTest01 {
 
 	public static void main(String[] args) {
 
-		System.out.println("태어난 년도를 입력하시오.");
+		System.out.println("태어난 년도를 입력하시오."); 
 		Scanner sc = new Scanner(System.in);
 		int year = sc.nextInt();
 
 		year %= 12;
 
-		switch (year/12){
+		switch (year%12){
 		case 4:
 			System.out.println("당신은 쥐띠입니다.");
 			break;

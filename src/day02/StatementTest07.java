@@ -7,7 +7,7 @@ public class StatementTest07 {
 //문제 : 사용자로부터 숫자를 입력받아 3의 배수인지여부를 출력 
 
 	public static void main(String[] args) throws IOException {
-
+ 
 		System.out.println("입력하세요!");
 
 		int value = System.in.read(); // 1. 사용자로부터 값을 입력받는다.

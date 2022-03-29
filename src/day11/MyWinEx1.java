@@ -31,7 +31,7 @@ public class MyWinEx1 extends Frame{
 
 	public static void main(String[] args) {
 		MyWinEx1 mw = new MyWinEx1("이벤트 처리");
-	}
+	} 
 	
 }
 class Handler implements ActionListener{

@@ -8,7 +8,7 @@ public class StatementTest09 {
 			for (int i = 1; i <= 9; i++) {
 				System.out.print(n + "*" + i + "=" + (n * i) + "\t");
 			}
-			System.out.println(); // ?
+			System.out.println(); 
 		}
 	}
 }

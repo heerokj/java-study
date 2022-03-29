@@ -17,5 +17,5 @@ public class ThreadEx1 {
 			System.out.println("현재 실행중인 스레드의 이름은 : " + Thread.currentThread().getName());
 			
 	}
-
+ 
 }

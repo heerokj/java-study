@@ -26,6 +26,7 @@ public class StatementEx5 {
 		n -= 48;
 
 		// 3. 2로 나눈 나머지 0이면 짝수 아니면 홀수
+		 
 		if (n % 2 == 0) {
 			System.out.println("짝수입니다.");
 		} else {
