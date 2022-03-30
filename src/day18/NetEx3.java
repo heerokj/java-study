@@ -1,4 +1,4 @@
-package day18; //서버입장
+package day18; //서버입장  
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -30,9 +30,10 @@ public class NetEx3 {
 			
 			//inetaddress를 가져올 수 있어
 			InetAddress inet = client.getInetAddress();
+			System.out.println(inet);
 			System.out.println(inet.getHostAddress());
 			
-			System.out.println("접속성공!!"); //NetEx2 class에서 다시 접속하면 출력됨
+			System.out.println("접속성공!!"); //NetEx2 class에서 접속하면 출력됨
 			
 			
 			
@@ -44,7 +45,7 @@ public class NetEx3 {
 			System.out.println(value); //65출력
 			
 			
-			
+			 
 			
 			//서버는 종이컵 전화기 수신부
 			InputStreamReader isr = new InputStreamReader(is);

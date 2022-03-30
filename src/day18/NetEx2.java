@@ -21,6 +21,7 @@ public class NetEx2 {
 			System.out.println(s);
 			
 			
+			
 			//종이컵 전화기의 발신부
 			//클라이언트 입장에선 내보냄
 			OutputStream os = s.getOutputStream();
@@ -29,7 +30,7 @@ public class NetEx2 {
 			
 			
 			
-			//한글처리는 (바이스스트림)=>char스트림으로 바꿔야 : InputStreamReader, OutputStreamWriter
+			//한글처리는(바이스스트림) => char스트림으로 바꿔야 : InputStreamReader, OutputStreamWriter
 			OutputStreamWriter ows = new OutputStreamWriter(os);
 			
 			//Buffer
