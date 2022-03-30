@@ -17,12 +17,12 @@ public class JDBCEx4 {
 		String user = "scott";
 		String password = "tiger";		
 		ResultSet rs = null;
-		PreparedStatement pstmt = null;
+		PreparedStatement pstmt = null; 
 		Connection conn = null;
 		
 		try {
 			//2. JDBC 드라이버 로딩되어 있는지 여부 체크
-			Class.forName(driver);	
+			Class.forName(driver);	// driver 경로의 객체 생성 ?
 			//3. 연결(Connection)			
 			conn = DriverManager.getConnection(url, user, password);
 			System.out.println(conn);
@@ -33,15 +33,15 @@ public class JDBCEx4 {
 			e.printStackTrace();
 		}	
 					
-		//4. SQL문 작성
+		//4. SQL문 작성 /  정해지지않은 값은 ?로 대체
 			String sql = "INSERT INTO dept VALUES (DEPT_DEPTNO.NEXTVAL, ?, ?)";	
 	
 			//5. 문장 객체 생성
 			try {
-				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, "영업"); //실행하는순간 데이터 채워지게 => 데이터베이스 성능 높임 
-				pstmt.setString(2, "서울");
-				//6. 실행 (select => ResulSet)
+				pstmt = conn.prepareStatement(sql); 
+				pstmt.setString(1, "영업"); //첫번째 ? 값을 지정해줌 //실행하는순간 데이터 채워지게 => 데이터베이스 성능 높임 
+				pstmt.setString(2, "서울"); //두번째 ? 값을 지정해줌
+			//6. 실행 (select => ResulSet)
 				pstmt.executeUpdate(); //SELECT문 일경우만  pstmt.executeQuery(); 이고 / 나머지는 .executeUpdate()			
 			
 			} catch (SQLException e) {

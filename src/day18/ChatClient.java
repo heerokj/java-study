@@ -48,7 +48,7 @@ public class ChatClient extends JFrame implements ActionListener, Runnable, KeyL
 		jp3 = new JPanel();
 		
 		jp1.setBackground(Color.cyan);
-		jp2.setBackground(Color.gray);
+		jp2.setBackground(Color.GREEN);
 
 		
 		jlbIP = new JLabel("IP");

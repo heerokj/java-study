@@ -43,10 +43,10 @@ public class JDBCEx3 {
 								
 		//5. 문장 객체 생성
 			try {
-				pstmt = conn.prepareStatement(sql);
+				pstmt = conn.prepareStatement(sql); //객체생성하고 sql실행 결과값을 pstmt에 전달
 		//6. 실행 (select => ResulSet)
-				rs = pstmt.executeQuery();
-				System.out.println(rs);
+				rs = pstmt.executeQuery(); 
+				System.out.println(rs); //rs참조값 출력
 				
 		//7. 읽어와서 레코드별로 로직 처리
 				while(rs.next()) {
