@@ -15,3 +15,11 @@
 //7. 읽어와서 레코드별로 로직 처리
 		
 //8. 자원반납
+
+        String driver = "oracle.jdbc.driver.OracleDriver"; 
+		String url = "jdbc:oracle:thin:@localhost:1521:orcl";	
+		String user = "scott";
+		String password = "tiger";		
+		ResultSet rs = null; 
+		PreparedStatement pstmt = null; 
+		Connection conn = null; 

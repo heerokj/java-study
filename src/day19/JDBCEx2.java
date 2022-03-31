@@ -36,7 +36,7 @@ public class JDBCEx2 {
 			System.out.println("DB연결 실패");                        
 			e.printStackTrace();
 		}
-			
+			 
 		//4. SQL문 작성 
 		//(사원의 급여가 1500이상인 사원의 사번, 이름, 급여)
 		String sql = "SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL>=1500";

@@ -158,7 +158,8 @@ public class NewLogin extends JFrame implements ActionListener {
 					
 		}else if(obj == jbtnRegister) {
 			System.out.println("회원가입 버튼 눌림");
-			new SignUp();
+			//new SignUp();
+			new Register();
 			//현재창은 감추기
 			this.setVisible(false);
 		}

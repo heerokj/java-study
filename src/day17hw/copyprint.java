@@ -73,7 +73,7 @@ public class copyprint extends JFrame implements ActionListener{
 	
 	
 	public static void main(String[] args) {
-		copyprint copy = new copyprint(); //객체생성해야 창 보	
+		copyprint copy = new copyprint(); //객체생성해야 창 보임	
 	}
 	
 	@Override

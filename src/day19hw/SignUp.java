@@ -136,10 +136,10 @@ public class SignUp extends JFrame implements ActionListener{
 			//2. JDBC 드라이버 로딩되어 있는지 여부 체크
 			try {
 				Class.forName(driver);
-			//3. 연결(Connection)
-			
+			//3. 연결(Connection)			
 				conn = 
 						DriverManager.getConnection(url, user, password);
+			
 				System.out.println("conn : " + conn);
 			} catch (ClassNotFoundException e1) {
 				System.out.println("드라이버 로딩 실패");
@@ -163,13 +163,13 @@ public class SignUp extends JFrame implements ActionListener{
 			//7. 읽어와서 레코드별로 로직 처리
 				if(isOK) {
 					JOptionPane.showConfirmDialog(this,
-							"이미 존재하는 아이디입니다. 확인 후 다시 시도해주세요.",
+			  				"이미 존재하는 아이디입니다. 확인 후 다시 시도해주세요.",
 							"확인",JOptionPane.PLAIN_MESSAGE);
 				}else{
 					JOptionPane.showConfirmDialog(this,
 							"사용 할 수 있는 아이디입니다.","확인",
 							JOptionPane.PLAIN_MESSAGE);
-				}
+				} 
 			
 			} catch (SQLException e1) {		
 				e1.printStackTrace();
@@ -183,7 +183,7 @@ public class SignUp extends JFrame implements ActionListener{
 					e1.printStackTrace();
 			    }
 		   }	
-		}else if (obj == jbtnSignUp) { //다시 체크하기!
+		}else if (obj == jbtnSignUp) { //다시 체크하기!!!!!
 			System.out.println("회원 가입 버튼 클릭하였습니다.");
 			//1. 변수선언
 			String driver = "oracle.jdbc.driver.OracleDriver";
