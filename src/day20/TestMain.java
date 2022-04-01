@@ -17,6 +17,7 @@ public class TestMain { //main에서 일일이 1~8자원반납 매번 작성안해줘도 됨
 		for(DeptVO vo : list) {
 			System.out.println(vo.getDeptno() +" : "+vo.getDname()+" : "+vo.getLoc());
 		}
+		System.out.println("-------");
 			
 		
 		//부서번호 10번 데이터 꺼내기(데이터 한개 꺼내기)
@@ -35,6 +36,7 @@ public class TestMain { //main에서 일일이 1~8자원반납 매번 작성안해줘도 됨
 		
 		//3번 부서 삭제
 		dao.deleteOne(3);
+		System.out.println("-------");
 		
 		//자원반납
 		dao.close();

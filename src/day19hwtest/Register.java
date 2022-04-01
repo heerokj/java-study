@@ -1,4 +1,4 @@
-package day19hwtest; //이거보면서 signup바꿔보기
+package day19hwtest; // 간단하게 만들기
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
