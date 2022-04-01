@@ -18,7 +18,7 @@ public class ButtonControl extends Frame implements KeyListener{
 				System.out.println("종료합니다.");
 				System.exit(0);
 			}
-		}); //snippet불러옴 ==>어케 불러와...
+		}); //snippet불러옴 ==>어케 불러와...ok!!
 		 	
 		setLayout(null);
 

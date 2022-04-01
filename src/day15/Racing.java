@@ -13,7 +13,7 @@ public class Racing extends JFrame implements ActionListener {
 	ImageIcon img1, img2, imgBg;
 	Horse h1, h2, h3; //??%%%%% 왜 여기다..
 
-	Racing() {
+	Racing() { 
 
 		// 기본 배치관리자 :BorderLayout
 		// 배치관리자X
