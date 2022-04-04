@@ -1,4 +1,17 @@
 package day19;
+//JDBC 란 자바에서 제공하는 데이터베이스와 연결하여 데이터를 주고 받을 수 있도록 하는 인터페이스
+
+//*Statement 클래스
+//- SQL 구문을 실행하는 역할
+//- 스스로는 SQL 구문 이해 못함(구문해석 X) -> 전달역할
+//- SQL 관리 O + 연결 정보 X
+
+//*PreparedStatement 클래스
+//- Statement 클래스의 기능 향상
+//- 인자와 관련된 작업이 특화(매개변수)
+//- 코드 안정성 높음. 가독성 높음.
+//- 코드량이 증가 -> 매개변수를 set해줘야하기 때문에..
+//- 텍스트 SQL 호출
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,8 +36,8 @@ public class JDBCEx1 {
 		String user = "scott"; //DB의 유저아이디
 		String password = "tiger"; //DB의 유저 패스워드
 		
-		ResultSet rs = null; //ResultSet객체 변수rs선언
 		PreparedStatement pstmt = null; //PreparedStatement객체 변수pstmt 선언
+		ResultSet rs = null; //ResultSet객체 변수rs선언
 		
 		
 		
@@ -49,15 +62,19 @@ public class JDBCEx1 {
 			e.printStackTrace();
 		}
 		
+	  
 	  ////4. SQL문 작성
 		String sql = "SELECT * FROM DEPT";
 		
 		try { //전달하려면 객체 생성해야함
-	  ////5. 문장 객체 생성 ->PreparedStatement
-			pstmt = conn.prepareStatement(sql); //위에다 걍 선언함
-	  ////6. 실행 (select => ResultSet)
-			rs = pstmt.executeQuery(); //위에다 걍 선언함  // 객체 pstmt의 executQuery() 메소드를 통해 결과값 저장
-			System.out.println("rs :" + rs); // DB로부터 dataSet을 가지고 옴
+	  
+	  ////5. 문장 객체 생성 ->PreparedStatement : *위에 설며있음!
+			pstmt = conn.prepareStatement(sql); //전역변수로 선언함 // sql문을 전달받아 변수pstmt에 저장
+	  System.out.println(pstmt);
+	
+	  ////6. 실행 (select => ResultSet)                  //executeQuery() : 수행결과로 ResultSet 객체의 값을 반환
+			rs = pstmt.executeQuery(); //전역변수로 선언함  // 객체 pstmt의 executQuery() 메소드를 통해 결과값 저장
+			System.out.println("rs :" + rs); // DB로부터 dataSet을 가지고 옴 
 			
 	  ////7. 읽어와서 레코드별로 로직 처리
 			
@@ -103,8 +120,8 @@ public class JDBCEx1 {
 		}finally { //예외가발생하든 말든 실행해 :finally
 			try {
 				if(rs != null)rs.close(); //가장마지막에 한게 rs이니 먼저close하기 
-				if(pstmt != null)pstmt.close(); 
-				if(conn != null)conn.close(); 
+				if(pstmt != null)pstmt.close();   //null일경우 닫으면 널포인트 익셉션이 발생		                                 
+				if(conn != null)conn.close();    //어짜피 null 인데 close()를 왜하냐는 의미. 만약의 사태에 대비하기 위해 먼저 null 체크를 하는것				
 				
 			} catch (SQLException e) {
 				e.printStackTrace();

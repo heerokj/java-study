@@ -76,44 +76,48 @@ public class MemberDAO {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return list;
 	}
 	
 	
+	
 	//1건조회
 	public MemberVO selectOne(String id) {
-		
+	
 		//4. SQL문 작성
-		sb.setLength(0);
-		sb.append("SELECT id, ename, pw, gender, motive FROM MEMBER WHERE id = ? ");
+		sb.setLength(0); //sql문 초기화
+		sb.append("SELECT ID, ENAME, PW, GENDER, MOTIVE FROM MEMBER ");
+		sb.append("WHERE ID = ? ");
 	
 		//5. 문장 객체 생성
 		
 			try {
-				pstmt = conn.prepareStatement(sb.toString());
-				pstmt.setString(1, id);
+				pstmt = conn.prepareStatement(sb.toString()); //sql문 객체화
+				pstmt.setString(1, id); // 첫번째 물음표
+	
 		//6. 실행 (select => ResulSet)
-			rs = pstmt.executeQuery();
+			rs = pstmt.executeQuery(); // SQL문 실행 및 rs에 결과값 담기
 			while(rs.next()) {
 				String pw = rs.getString("pw");
 				String ename = rs.getString("ename");
 				String gender = rs.getString("gender");
 				String motive = rs.getString("motive");
-				mvo = new MemberVO(id, ename, pw, gender, motive);
+			
+				mvo = new MemberVO(id, ename, pw, gender, motive);  // MemberVO 객체 생성 후 매개변수로 변수값 대입
 			}	
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}				
-		
-	return mvo;
+		}						
+	return mvo; //mov리턴
 	}
+	
+	
 	
 	//추가
 	public void insertOne(MemberVO vo) {
 		//4. SQL문 작성
-		sb.setLength(0);
+		sb.setLength(0); 
 		sb.append("INSERT INTO member VALUES(?, ?, ?, ? , ? ");
      	
 		//5. 문장 객체 생성
@@ -138,9 +142,9 @@ public class MemberDAO {
 	
 	
 	
-	//변경
-	//삭제
+	//변경	
 	
+	//삭제
 	
 	
 	// 8. 자원반납
@@ -157,11 +161,3 @@ public class MemberDAO {
 	}
 
 }
-
-//4. SQL문 작성
-
-//5. 문장 객체 생성
-		
-//6. 실행 (select => ResulSet)
-		
-//7. 읽어와서 레코드별로 로직 처리

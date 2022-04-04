@@ -48,7 +48,7 @@ public class MyWin2 extends Frame implements ActionListener{
 				
 	}
 	
-	@Override
+	@Override //paint메소드 오버라이드 : 화면에 그리는것
 	public void paint(Graphics g) {		
 		super.paint(g);
 		g.drawLine(100, 100, 300, 300);

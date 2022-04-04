@@ -9,6 +9,7 @@ import java.awt.event.WindowEvent;
 public class Q03 extends Frame{
 
 	int x, y;
+	
 	Q03(){
 				
 		this.addWindowListener(new WindowAdapter() {

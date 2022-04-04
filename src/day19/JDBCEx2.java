@@ -23,7 +23,7 @@ public class JDBCEx2 {
 		   		
 		//2. JDBC 드라이버 로딩되어 있는지 여부 체크
 		try {
-			Class.forName(driver); //drive에 입력한 클래스를 찾아 객체를 리턴 ?
+			Class.forName(driver); //drive에 입력한 클래스를 찾아 객체를 리턴
 			
 		//3. 연결(Connection)			//url,user,password를 통해 DB연결, 연결이 성공하면 변수conn에 전달
 			conn =                  //url, user, password를 통해 연결받은 객체를 저장 

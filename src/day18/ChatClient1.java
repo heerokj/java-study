@@ -1,4 +1,3 @@
-package day18;
 /*
 package day18;
 

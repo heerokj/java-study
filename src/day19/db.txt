@@ -16,10 +16,10 @@
 		
 //8. ÀÚ¿ø¹Ý³³
 
-        String driver = "oracle.jdbc.driver.OracleDriver"; 
+        String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@localhost:1521:orcl";	
 		String user = "scott";
 		String password = "tiger";		
-		ResultSet rs = null; 
 		PreparedStatement pstmt = null; 
+		ResultSet rs = null;
 		Connection conn = null; 

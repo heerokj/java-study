@@ -24,9 +24,10 @@ public class JDBCEx5 {
 		String url = "jdbc:oracle:thin:@localhost:1521:orcl";	
 		String user = "scott";
 		String password = "tiger";		
-		ResultSet rs = null;
-		PreparedStatement pstmt = null; 
+		
 		Connection conn = null; 
+		PreparedStatement pstmt = null; 
+		ResultSet rs = null;
 		
 		//2. JDBC 드라이버 로딩되어 있는지 여부 체크
 		try {
@@ -34,7 +35,8 @@ public class JDBCEx5 {
 			
 		//3. 연결(Connection)		
 			conn = DriverManager.getConnection(url, user, password);
-			System.out.println(conn); 
+			System.out.println(conn);
+	
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 로딩 실패");
 		} catch (SQLException e) {
@@ -43,19 +45,11 @@ public class JDBCEx5 {
 		}
 							
 		//4. SQL문 작성
-		StringBuffer sb = new StringBuffer();   //문장길어질때 => StringBuffer사용
-//		sb.append("INSERT INTO EMP(EMPNO, ENAME, SAL ) ");
-//		sb.append("VALUES (?, ? , ? ) ");
-		
-//		sb.append("UPDATE EMP ");
-//		sb.append("SET SAL = ? ");
-//		sb.append("WHERE EMPNO = ? ");
-
-		sb.append("DELETE EMP ");
-		sb.append("WHERE EMPNO = ? ");
+		StringBuffer sb = new StringBuffer(); //문장길어질때 => StringBuffer사용하여 이어붙이기	  
+		sb.append("DELETE EMP "); // "전에 꼭 띄어쓰기 하기!!
+		sb.append("WHERE EMPNO = ? "); 
 		
 		
-
 		//5. 문장 객체 생성
 		try {
 			pstmt = conn.prepareStatement(sb.toString());
@@ -70,13 +64,14 @@ public class JDBCEx5 {
 			pstmt.setInt(1, 1111);
 			
 					
-			//6. 실행 (select => ResulSet)
+		//6. 실행 (select => ResulSet)
 			pstmt.executeUpdate();
+	
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+	
 		}finally {
-			//8. 자원반납
+		//8. 자원반납
 			try {
 				if (pstmt != null)
 					pstmt.close();

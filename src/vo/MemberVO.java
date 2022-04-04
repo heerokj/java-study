@@ -1,6 +1,7 @@
 package vo;
 
 public class MemberVO {
+	
 	String id;
 	String ename;
 	String pw;
@@ -9,7 +10,7 @@ public class MemberVO {
 	
 	//기본생성자
 	MemberVO(){
-		
+		 
 	}
 	 
 	//매개변수있는 생성자

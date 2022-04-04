@@ -1,4 +1,6 @@
-package vo; //vo(Value Object)
+package vo; 
+
+//VO(Value Object)
 
 public class DeptVO {
 
@@ -9,7 +11,7 @@ public class DeptVO {
 	//기본생성자
 	public DeptVO() {
 		
-	}
+	} 
 	
 	//매개변수있는생성자
 	public DeptVO(int deptno, String dname, String loc) {
